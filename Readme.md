@@ -4,8 +4,7 @@ This software package was developed to study the optimal Weyl-Heisenberg bases a
 
 Asiryan Valery Mishevich, © 2017-2018
 
-
-# Weyl-Heisenberg Bases Toolbox
+#
 
 Данный программный комплекс был разработан для исследования оптимальных базисов Вейля-Гейзенберга и их свойств в области 
 обработки и сжатия сигналов. Пакет включает в себя M-файлы, позволяющие проводить синтез и анализ формирующих WH-функций 
