@@ -1,6 +1,6 @@
 # Weyl-Heisenberg Bases Toolbox
 
-This software package was developed to study the optimal Weyl-Heisenberg bases and their properties in the field of signal processing and compression. The toolbox includes M-files that allow the synthesis and analysis of the forming WH-functions and the corresponding orthogonal WH-bases, the description of which can be found in the presented literature.
+This toolbox was developed to study the optimal Weyl-Heisenberg bases and their properties in the field of signal processing and compression. The toolbox includes M-files that allow the synthesis and analysis of the forming WH-functions and the corresponding orthogonal WH-bases, the description of which can be found in the presented literature.
 
 Asiryan Valeriy, © 2017-2018
 
