@@ -1,30 +1,49 @@
 %% Weyl-Heisenberg Bases Toolbox
 % Function "compress.m"
 %% Описание:
-% Функция сжатия данных массива вещественных чисел по пороговому значению.
+% Функция сжатия данных массива вещественных чисел по коэффициенту
+% сжатия.
 %
 %% Входные данные:
 % I - двумерный массив,
-% threshold - пороговое значение.
+% coefficient - коэффициент сжатия (0, 1).
 %
 %% Выходные данные:
 % J - двумерный массив-результат,
-% total - число сжатых элементов.
-function [ J, total ] = compress( I, threshold )
-%% Определение параметров массива:
+% compressed - число сжатых элементов,
+% total - общее число элементов.
+function [ J, compressed, total ] = compress( I, coefficient )
+%% Определение параметров:
 l0 = size(I, 1);
 l1 = size(I, 2);
-J = zeros(l0, l1);
-total = 0;
-%% Сжатие по пороговому значению:
+ll = l0 * l1;
+H = zeros(1, ll);
+
+%% Формирование вектора:
 for i = 1 : l0
     for j = 1 : l1
-        if (abs(I(i, j)) < threshold)
+        H(1, i * l0 + j) = abs(I(i, j));
+    end
+end
+H = sort(H);
+
+%% Вычисление порога
+threshold = H(1, floor(ll * coefficient));
+
+%% Сжатие по пороговому значению:
+J = zeros(l0, l1);
+compressed = 0;
+total = 0;
+
+for i = 1 : l0
+    for j = 1 : l1
+        if (abs(I(i, j)) <= threshold)
             J(i, j) = 0;
-            total = total + 1;
+            compressed = compressed + 1;
         else
             J(i, j) = I(i, j);
-        end;
-    end;
-end;
+        end
+        total = total + 1;
+    end
+end
 end
