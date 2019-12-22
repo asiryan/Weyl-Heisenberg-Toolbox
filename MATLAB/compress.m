@@ -12,13 +12,13 @@
 % compressed - количество сжатых элементов,
 % total - общее число элементов.
 function [ J, compressed, total ] = compress( I, coefficient )
-%% Определение параметров массива
+% Определение параметров массива
 l0 = size(I, 1);
 l1 = size(I, 2);
 ll = l0 * l1;
 H = zeros(1, ll);
 
-%% Преобразование в вектор
+% Преобразование в вектор
 for i = 1 : l0
     for j = 1 : l1
         H(1, i * l0 + j) = abs(I(i, j));
@@ -26,10 +26,10 @@ for i = 1 : l0
 end
 H = sort(H);
 
-%% Вычисление порога
+% Вычисление порога
 threshold = H(1, floor(ll * coefficient));
 
-%% Сжатие по пороговому значению
+% Сжатие по пороговому значению
 J = zeros(l0, l1);
 compressed = 0;
 total = 0;
