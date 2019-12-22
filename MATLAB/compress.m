@@ -9,7 +9,7 @@
 % coefficient - коэффициент сжатия (0, 1).
 %
 %% Выходные данные:
-% J - двумерный массив-результат,
+% J - двумерный массив,
 % compressed - число сжатых элементов,
 % total - общее число элементов.
 function [ J, compressed, total ] = compress( I, coefficient )
