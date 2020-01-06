@@ -1,7 +1,6 @@
 # Weyl-Heisenberg Bases Toolbox
 
-Данный программный комплекс был разработан для исследования оптимальных базисов Вейля-Гейзенберга и их свойств в области 
-обработки и сжатия сигналов. Пакет включает в себя M-файлы, позволяющие проводить синтез и анализ формирующих WH-функций 
-и соотвествующих им ортогональных WH-базисов, описание которых можно найти в представленной [литературе](https://github.com/asiryan/Weyl-Heisenberg-Bases-Toolbox/blob/master/References.pdf).
+This MATLAB toolbox was developed to study the optimal Weyl-Heisenberg bases and their properties in the field of signal processing and compression. The toolbox includes m-files that allow the synthesis and analysis of forming WH-functions and their corresponding orthogonal WH-bases.
 
-Асирян Валерий, © 2017-2019 гг.
+# References
+A full list of references is given in a separate [file](https://github.com/asiryan/Weyl-Heisenberg-Bases-Toolbox/blob/master/References.pdf)
