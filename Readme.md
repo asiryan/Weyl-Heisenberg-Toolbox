@@ -31,4 +31,4 @@ Beta-parameter = 2
 <p align="left"><img width="60%" src="Docs/filterf.png" /></p>
 
 # Referencess
-A full list of references is given in a separate [file](Docs/References.pdf) (primarily in Russian).
+A full list of references is given in a separate [file](Docs/References.pdf) (**primarily in Russian**).
