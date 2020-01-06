@@ -19,8 +19,8 @@ title('Image');
 N = size(I, 1);
 
 %% Basis params
-a = phaseparam(M, L); % alfa-parameter
 L = N/M; % number of time shifts
+a = phaseparam(M, L); % alfa-parameter
 
 %% Construction of transform matrix
 W = weylhzp(M, L, a, sigma);

@@ -1,5 +1,5 @@
 %% Weyl-Heisenberg Bases Toolbox
-% Script "filter.m"
+% Script "filterf.m"
 %% Description:
 % Implements the construction of frequency-time banks of Gabor and 
 % Weyl-Heisenberg filters, and also plots graphs of the frequency response 
@@ -30,7 +30,7 @@ figure('Color','white');
 subplot(2,1,1);
 hold on;
 plot(abs(g0),'k--','linewidth',2);
-plot(abs(gopt),'k-','linewidth',2);
+plot(abs(gopt),'r-','linewidth',2);
 grid on;
 title('Time domain');
 ylabel('Amplitude');
@@ -42,7 +42,7 @@ hold off;
 subplot(2,1,2);
 hold on;
 plot(abs(ufft(g0)),'k--','linewidth',2);
-plot(abs(ufft(gopt)),'k-','linewidth',2);
+plot(abs(ufft(gopt)),'r-','linewidth',2);
 grid on;
 title('Frequency domain');
 ylabel('Amplitude');
