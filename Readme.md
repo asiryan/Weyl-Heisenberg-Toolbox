@@ -18,8 +18,7 @@ Standard deviation = 0.00025
 
 <p align="left"><img width="60%" src="Docs/truncgaussian.png" /></p>
 
-# Example
-Example of the synthesis of a function and its orthogonalization.  
+# Example of the WH-function synthesis  
 Run test script:
 ```
 >> filterf
