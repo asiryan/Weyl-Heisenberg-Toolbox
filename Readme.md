@@ -9,6 +9,14 @@ addpath('[...] MATLAB/Scripts')
 addpath('[...] MATLAB/Samples')  
 addpath('[...] MATLAB/Samples/Images')  
 ```
+Run test script  
+```matlab
+>> plotgauss3
+Number of samples = 128
+Standard deviation = 0.00025
+```
+And get results  
+<p align="left"><img width="80%" src="Docs/truncgaussian.png" /></p>
 
 # Referencess
-A full list of references is given in a separate [file](https://github.com/asiryan/Weyl-Heisenberg-Bases-Toolbox/blob/master/References.pdf)
+A full list of references is given in a separate [file](Docs/References.pdf)
