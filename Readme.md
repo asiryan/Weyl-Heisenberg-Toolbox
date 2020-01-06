@@ -15,7 +15,7 @@ Run test script
 Number of samples = 128
 Standard deviation = 0.00025
 ```
-And get results  
+
 <p align="left"><img width="60%" src="Docs/truncgaussian.png" /></p>
 
 # Referencess
