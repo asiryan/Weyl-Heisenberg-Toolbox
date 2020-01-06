@@ -4,10 +4,10 @@ This MATLAB toolbox was developed to study the optimal Weyl-Heisenberg bases and
 
 # Installation
 Add to MATLAB path toolbox folder and folders with samples:
-```  
-"MATLAB/Scripts"  
-"MATLAB/Samples",  
-"MATLAB/Samples/Images".  
+```matlab  
+addpath('[...] MATLAB/Scripts')  
+addpath('[...] MATLAB/Samples')  
+addpath('[...] MATLAB/Samples/Images')  
 ```
 
 # Referencess
