@@ -24,7 +24,7 @@ Run test script:
 >> filterf
 Number of frequency shifts M = 16
 Number of time shifts L = 16
-Beta-parameter = 3
+Beta-parameter = 2
 ```
 <p align="left"><img width="60%" src="Docs/filterf.png" /></p>
 
