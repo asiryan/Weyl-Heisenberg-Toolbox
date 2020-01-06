@@ -20,7 +20,7 @@ Standard deviation = 0.00025
 
 # Example of the WH-function synthesis  
 Run sample script:
-```
+```matlab
 >> filterf
 Number of frequency shifts M = 16
 Number of time shifts L = 16
