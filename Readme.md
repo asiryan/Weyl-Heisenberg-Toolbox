@@ -9,7 +9,7 @@ addpath('[...] /MATLAB/Scripts')
 addpath('[...] /MATLAB/Samples')  
 addpath('[...] /MATLAB/Samples/Images')  
 ```
-Run test script  
+Run test script:  
 ```matlab
 >> plotgauss3
 Number of samples = 128
@@ -17,6 +17,17 @@ Standard deviation = 0.00025
 ```
 
 <p align="left"><img width="60%" src="Docs/truncgaussian.png" /></p>
+
+# Example
+Example of the synthesis of a function and its orthogonalization.  
+Run test script:
+```
+>> filterf
+Number of frequency shifts M = 16
+Number of time shifts L = 16
+Beta-parameter = 3
+```
+<p align="left"><img width="60%" src="Docs/filterbank.png" /></p>
 
 # Referencess
 A full list of references is given in a separate [file](Docs/References.pdf)
