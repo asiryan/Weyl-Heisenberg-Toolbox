@@ -10,6 +10,10 @@ M     = input('Number of time shifts M = ');
 sigma = input('Standard deviation = ');
 t     = input('Threshold (0, 1) = ');
 
+%% Properties
+set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman'); 
+set(0,'DefaultTextFontSize',11,'DefaultAxesFontName','Times New Roman'); 
+
 %% Image matrix
 RGB = imread('Images/lena256.png');
 I = double(rgb2gray(RGB));

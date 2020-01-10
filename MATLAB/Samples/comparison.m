@@ -1,7 +1,7 @@
 %% Weyl-Heisenberg Bases Toolbox
 % Script "comparison.m"
 %% Description:
-% Implements a comparison of two matrices of optimal Weil-Heisenberg bases:
+% Implements a comparison of two matrices of optimal Weyl-Heisenberg bases:
 % 1) synthesized using eigenvalue decomposition,
 % 2) synthesized using the fast algorithm.
 %
@@ -16,16 +16,16 @@ L     = input('Number of time shifts L = ');
 a     = input('Alfa-parameter = ');
 sigma = input('Standard deviation = ');
 
-%% Construction of the matrix of the Weil-Heisenberg optimal basis using eigenvalue decomposition
+%% Construction of the matrix of the Weyl-Heisenberg optimal basis using eigenvalue decomposition
 tic;
 W = weylhz(M, L, a, sigma);
-disp('Base synthesis time using eigenvalue decomposition:')
+disp('Basis synthesis time using eigenvalue decomposition:')
 toc;
 
-%% Construction of the matrix of the optimal Weil-Heisenberg basis using the fast algorithm
+%% Construction of the matrix of the optimal Weyl-Heisenberg basis using the fast algorithm
 tic;
 Wp = weylhzp(M, L, a, sigma);
-disp('Base synthesis time using the fast algorithm:')
+disp('Basis synthesis time using the fast algorithm:')
 toc;
 
 %% Matrix identity assessment

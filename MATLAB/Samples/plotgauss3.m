@@ -16,8 +16,10 @@ Z = g0' * g0./ maximum;
 S = 1:N;
 
 %% Plotting
-set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 figure(1);
+set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman'); 
+set(0,'DefaultTextFontSize',11,'DefaultAxesFontName','Times New Roman'); 
+
 surf(S,S,real(Z));
 shading interp;
 title('Truncated Gaussian function');

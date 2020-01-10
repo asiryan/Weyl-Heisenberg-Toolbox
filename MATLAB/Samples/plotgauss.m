@@ -11,8 +11,10 @@ sigma = input('Standard deviation = ');
 g0 = discret(sigma, N);
 
 %% Plotting
-set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 figure(1)
+set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman'); 
+set(0,'DefaultTextFontSize',11,'DefaultAxesFontName','Times New Roman'); 
+
 plot(g0, 'k','linewidth',2.5);
 grid on;
 title('Truncated Gaussian function');
