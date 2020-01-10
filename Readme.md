@@ -18,7 +18,7 @@ Number of samples = 128
 Standard deviation = 0.00025
 ```
 
-<p align="left"><img width="60%" src="Docs/truncgaussian.png" /></p>
+<p align="left"><img width="60%" src="Docs/plotgauss3.png" /></p>
 
 # Example of the WH-function synthesis  
 Run sample script:
