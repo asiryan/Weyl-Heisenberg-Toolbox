@@ -28,7 +28,7 @@ Number of frequency shifts M = 16
 Number of time shifts L = 16
 Beta-parameter = 2
 ```
-<p align="left"><img width="60%" src="Docs/filterf.png" /></p>
+<p align="left"><img width="70%" src="Docs/filterf.png" /></p>
 
 # Referencess
 A full list of references is given in a separate [file](Docs/References.pdf) (**primarily in Russian**).
