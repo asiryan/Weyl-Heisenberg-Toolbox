@@ -12,7 +12,7 @@ t     = input('Threshold (0, 1) = ');
 
 %% Properties
 set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman'); 
-set(0,'DefaultTextFontSize',11,'DefaultAxesFontName','Times New Roman'); 
+set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman'); 
 
 %% Image matrix
 RGB = imread('Images/lena256.png');

@@ -29,15 +29,15 @@ W = weylhzp(M, L, a, sigma); % complex W-H matrix
 %% Plotting
 figure(1);
 set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman'); 
-set(0,'DefaultTextFontSize',11,'DefaultAxesFontName','Times New Roman'); 
+set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman'); 
 
 % Time domain
 TP0 = abs(G);
 TP1 = abs(W);
 subplot(2,1,1);
 hold on;
-plot(TP0(:,1),'k--','linewidth',2.2);
-plot(TP1(:,1),'k-','linewidth',2.2);
+plot(TP0(:,1),'k--','linewidth',2);
+plot(TP1(:,1),'r-','linewidth',2);
 grid on;
 title('Time domain');
 ylabel('Amplitude');
@@ -50,8 +50,8 @@ SP0 = abs(fft(G));
 SP1 = abs(fft(W));
 subplot(2,1,2);
 hold on;
-plot(SP0(:,1),'k--','linewidth',2.2);
-plot(SP1(:,1),'k-','linewidth',2.2);
+plot(SP0(:,fix(M/2)+1),'k--','linewidth',2);
+plot(SP1(:,fix(M/2)+1),'r-','linewidth',2);
 legend('Gabor basis', ' WH-basis');
 grid on;
 title('Frequency domain');
