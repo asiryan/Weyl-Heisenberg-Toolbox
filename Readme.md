@@ -20,16 +20,17 @@ Standard deviation = 0.00025
 
 <p align="center"><img width="60%" src="Docs/plotgauss3.png" /></p>
 
-# Filter synthesis  
-Example of the construction of frequency-time banks of Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*) filters.  
+# Basis synthesis  
+Example of the bases construction: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
 Run sample script:  
 ```matlab
->> filterf
+>> basis
 Number of frequency shifts M = 16
 Number of time shifts L = 16
-Beta-parameter = 2
+Alfa-parameter = 8
+Standard deviation = 0.0025
 ```
-<p align="center"><img width="65%" src="Docs/filterf.png" /></p>
+<p align="center"><img width="60%" src="Docs/basis.png" /></p>
 
 # Referencess
 A full list of references is given in a separate [file](Docs/References.pdf) (**primarily in Russian**).
