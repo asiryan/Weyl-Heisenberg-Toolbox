@@ -20,8 +20,9 @@ Standard deviation = 0.00025
 
 <p align="center"><img width="60%" src="Docs/plotgauss3.png" /></p>
 
-# Example of the WH-function synthesis  
-Run sample script:
+# WH-function filter synthesis  
+Example of the construction of frequency-time banks of Gabor (non-orthogonal) and Weyl-Heisenberg (orthogonal) filters.  
+Run sample script:  
 ```matlab
 >> filterf
 Number of frequency shifts M = 16
