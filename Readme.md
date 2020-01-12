@@ -18,7 +18,7 @@ Number of samples = 128
 Standard deviation = 0.00025
 ```
 
-<p align="left"><img width="60%" src="Docs/plotgauss3.png" /></p>
+<p align="center"><img width="60%" src="Docs/plotgauss3.png" /></p>
 
 # Example of the WH-function synthesis  
 Run sample script:
@@ -28,7 +28,7 @@ Number of frequency shifts M = 16
 Number of time shifts L = 16
 Beta-parameter = 2
 ```
-<p align="left"><img width="65%" src="Docs/filterf.png" /></p>
+<p align="center"><img width="65%" src="Docs/filterf.png" /></p>
 
 # Referencess
 A full list of references is given in a separate [file](Docs/References.pdf) (**primarily in Russian**).
