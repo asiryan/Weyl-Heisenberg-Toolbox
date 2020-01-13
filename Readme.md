@@ -7,9 +7,9 @@ The classic procedure for the synthesis of Weyl-Heisenberg bases is described in
 # Installation
 Add to MATLAB path toolbox scripts and samples folders:  
 ```matlab  
-addpath('[...] /MATLAB/Scripts')  
-addpath('[...] /MATLAB/Samples')  
-addpath('[...] /MATLAB/Samples/Images')  
+addpath('[...] /MATLAB/toolbox_scripts')  
+addpath('[...] /MATLAB/toolbox_samples')  
+addpath('[...] /MATLAB/toolbox_samples/Images')  
 ```
 Run sample script:  
 ```matlab
