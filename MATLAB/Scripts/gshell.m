@@ -6,12 +6,11 @@
 %% Input:
 % g - input vector of samples of the function.
 % M - number of frequency shifts,
-% a - alfa-parameter,
-% sigma - standard deviation.
+% a - alfa-parameter.
 %
 %% Output:
-% Gr - real matrix [N, N],
-% Gi - imaginary matrix [N, N].
+% Gr - matrix of real components [N, N],
+% Gi - matrix of imaginary components [N, N].
 function [ Gr, Gi ] = gshell( g, M, a )
 N = length(g); % samples
 L = N / M;     % number of time shifts
