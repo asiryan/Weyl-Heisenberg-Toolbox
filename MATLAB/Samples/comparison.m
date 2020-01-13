@@ -24,7 +24,7 @@ toc;
 
 %% Construction of the matrix of the optimal Weyl-Heisenberg basis using the fast algorithm
 tic;
-Wp = weylhzp(M, L, a, sigma);
+Wp = weylhzf(M, L, a, sigma);
 disp('Basis synthesis time using the fast algorithm:')
 toc;
 
@@ -32,7 +32,7 @@ toc;
 A = norm(W - Wp);
 eps = 1e-8;
 
-if (A < eps)
+if (A <= eps)
     disp('Matrices are identical.');
 else
     disp('Matrices are identical with an error:')

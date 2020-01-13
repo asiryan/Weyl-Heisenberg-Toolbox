@@ -1,7 +1,8 @@
 %% Weyl-Heisenberg Bases Toolbox
 % Function "weylhzg.m"
 %% Description:
-% Construction the Weyl-Heisenberg matrix using Gram-Schmidt process.
+% Constructs the rectangular complex matrix of the Weyl-Heisenberg basis
+% using Gram-Schmidt process.
 %
 %% Input:
 % M - number of frequency shifts,
@@ -18,7 +19,7 @@ function [ W ] = weylhzg( M, L, a, sigma )
 %                                                          |ImG| => [2N, 2N]
 N  = M * L; % samples
 N2 = N * 2;
-Gb = gaborreal(M, L, a, sigma);
+Gb = gaborr(M, L, a, sigma);
 
 %% 2. Gram-Schmidt orthogonalization
 Vopt = gschmidt(Gb);

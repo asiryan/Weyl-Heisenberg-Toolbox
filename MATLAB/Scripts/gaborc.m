@@ -1,7 +1,7 @@
 %% Weyl-Heisenberg Bases Toolbox
-% Function "gabor.m"
+% Function "gaborc.m"
 %% Description:
-% Constructs the rectangular complex matrix of the Gabor basis.
+% Constructs the square complex matrix of the Gabor basis.
 % 
 %% Notation: 
 % This basis is not orthogonal.
@@ -14,7 +14,7 @@
 %
 %% Output:
 % G - Gabor matrix [N, 2N].
-function [ G ] = gabor( M, L, a, sigma )
+function [ G ] = gaborc( M, L, a, sigma )
 N = M * L; % samples
 
 %% 1. Discretization
@@ -24,5 +24,5 @@ g = gaussian(N, sigma);
 [Gr, Gi] = gshell(g, M, a);
 
 %% 3. Gabor matrix: G=[Gr, Gi] => [N, 2N]
-G = [Gr, Gi];
+G = real(Gr) + 1i * real(Gi);
 end

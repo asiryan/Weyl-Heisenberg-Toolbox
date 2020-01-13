@@ -7,9 +7,11 @@
 %% Notation:
 % As a matrix of the Weyl-Heisenberg optimal basis can also be used one 
 % of various other products methods of orthogonalization (eigenvalue 
-% decomposition, Gram-Schmidt process, polyphase decomposition).
-% To do this, make the appropriate replacement in the line of code by
-% "weylhz", "weylhzg" or "weylhzp".
+% decomposition, Gram-Schmidt process, fast algorithm).
+% 
+% Rectangular complex matrices: "gabor", "weylhz", "weylhzf", "weylhzg".
+% Square real matrices: "gaborr", "weylhzr".
+% Square complex matrices: "gaborc", "weylhzc".
 %
 %% Input
 M     = input('Number of frequency shifts M = ');
@@ -18,13 +20,11 @@ a     = input('Alfa-parameter = ');
 sigma = input('Standard deviation = ');
 
 %% Bases construction
-% Construction of a rectangular matrix of a Gabor basis:
-G = gabor(M, L, a, sigma); % complex Gabor matrix
-%G = gaborreal(M, L, a, sigma); % real Gabor matrix
+% Construction of the Gabor basis:
+G = gabor(M, L, a, sigma); % Gabor matrix
 
-% Construction of a rectangular matrix of the optimal Weyl-Heisenberg basis:
-W = weylhzp(M, L, a, sigma); % complex W-H matrix
-%W = weylhzreal(M, L, a, sigma); % real W-H matrix
+% Construction of the Weyl-Heisenberg basis:
+W = weylhzf(M, L, a, sigma); % W-H matrix
 
 %% Plotting
 figure(1);

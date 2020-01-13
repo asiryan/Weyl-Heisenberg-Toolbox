@@ -12,28 +12,20 @@
 % compressed - number of compressed elements,
 % total - total number of elements.
 function [ J, compressed, total ] = compress( I, coefficient )
-% Params
+% params
 l0 = size(I, 1);
 l1 = size(I, 2);
 ll = l0 * l1;
-H = zeros(1, ll);
-
-% Convert to vector
-for i = 1 : l0
-    for j = 1 : l1
-        H(1, i * l0 + j) = abs(I(i, j));
-    end
-end
-H = sort(H);
-
-% Threshold
-threshold = H(1, floor(ll * coefficient));
-
-% Compress
 J = zeros(l0, l1);
 compressed = 0;
 total = 0;
 
+% reshaping and calculating threshold
+H = abs(reshape(I, ll, 1));
+H = sort(H);
+threshold = H(floor(ll * coefficient), 1);
+
+% compression
 for i = 1 : l0
     for j = 1 : l1
         if (abs(I(i, j)) <= threshold)

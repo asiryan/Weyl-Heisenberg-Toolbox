@@ -18,9 +18,9 @@ disp(sigma);
 disp(alfa);
 
 %% Basis functions
-g0=discret(sigma, N);
-gopt = dzakt(g0, M); % Discrete Zak-Transform
-%gopt = wigner(g0, M); % Discrete Wigner Transform
+g = gaussian(N,sigma);
+gopt = dzakt(g, M); % Discrete Zak-Transform
+%gopt = wigner(g, M); % Discrete Wigner Transform
 
 %% Plotting
 figure(1);
@@ -30,7 +30,7 @@ set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 % Impulse response
 subplot(2,1,1);
 hold on;
-plot(abs(g0),'k--','linewidth',2);
+plot(abs(g),'k--','linewidth',2);
 plot(abs(gopt),'r-','linewidth',2);
 grid on;
 title('Time domain');
@@ -42,7 +42,7 @@ hold off;
 % Frequency response
 subplot(2,1,2);
 hold on;
-plot(abs(ufft(g0)),'k--','linewidth',2);
+plot(abs(ufft(g)),'k--','linewidth',2);
 plot(abs(ufft(gopt)),'r-','linewidth',2);
 grid on;
 title('Frequency domain');

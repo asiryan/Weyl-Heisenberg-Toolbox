@@ -8,11 +8,11 @@ N     = input('Number of samples = ');
 sigma = input('Standard deviation = ');
 
 %% Discretization
-g0 = discret(sigma, N);
+g = gaussian(N, sigma);
 
 %% 3d mesh
-maximum = max(g0);
-Z = g0' * g0./ maximum;
+maximum = max(g);
+Z = g' * g./ maximum;
 S = 1:N;
 
 %% Plotting

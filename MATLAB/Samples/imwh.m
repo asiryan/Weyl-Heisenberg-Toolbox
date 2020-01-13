@@ -27,7 +27,7 @@ L = N/M; % number of time shifts
 a = phaseparam(M, L); % alfa-parameter
 
 %% Construction of transform matrix
-W = weylhzp(M, L, a, sigma);
+W = weylhzf(M, L, a, sigma);
 
 %% Forward DWHT
 A = real(W' * I * W);
