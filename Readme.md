@@ -9,7 +9,6 @@ Add to MATLAB path toolbox scripts and samples folders:
 ```matlab  
 addpath('[...] /MATLAB/toolbox_scripts')  
 addpath('[...] /MATLAB/toolbox_samples')  
-addpath('[...] /MATLAB/toolbox_samples/Images')  
 ```
 Run sample script:  
 ```matlab
