@@ -7,8 +7,8 @@ The classic procedure for the synthesis of Weyl-Heisenberg bases is described in
 # Installation
 Add to MATLAB path toolbox scripts and samples folders:  
 ```matlab  
-addpath('[...] /MATLAB/toolbox_scripts')  
-addpath('[...] /MATLAB/toolbox_samples')  
+addpath('[...] /matlab/toolbox_scripts')  
+addpath('[...] /matlab/toolbox_samples')  
 ```
 Run sample script:  
 ```matlab
@@ -17,7 +17,7 @@ Number of samples = 128
 Standard deviation = 0.00025
 ```
 
-<p align="center"><img width="60%" src="Docs/plotgauss3.png" /></p>
+<p align="center"><img width="60%" src="docs/plotgauss3.png" /></p>
 
 # Basis synthesis  
 Example of the bases construction: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
@@ -29,7 +29,7 @@ Number of time shifts L = 16
 Alfa-parameter = 8
 Standard deviation = 0.0025
 ```
-<p align="center"><img width="60%" src="Docs/basis.png" /></p>
+<p align="center"><img width="60%" src="docs/basis.png" /></p>
 
 # Referencess
-A full list of references is given in a separate [file](Docs/References.pdf) (**primarily in Russian**).
+A full list of references is given in a separate [file](docs/references.pdf) (**primarily in Russian**).
