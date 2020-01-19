@@ -31,5 +31,8 @@ Standard deviation = 0.0025
 ```
 <p align="center"><img width="60%" src="docs/basis.png" /></p>
 
+# License
+**GNU GPL v3.0**  
+
 # Referencess
 A full list of references is given in a separate [file](docs/references.pdf) (**primarily in Russian**).
