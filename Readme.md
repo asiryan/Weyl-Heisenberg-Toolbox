@@ -11,7 +11,7 @@ addpath('[...] /matlab/toolbox_scripts')
 addpath('[...] /matlab/toolbox_samples')  
 ```
 Run sample script:  
-```matlab
+```
 >> plotgauss3
 Number of samples = 128
 Standard deviation = 0.00025
@@ -22,7 +22,7 @@ Standard deviation = 0.00025
 # Basis synthesis  
 Example of the bases construction: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
 Run sample script:  
-```matlab
+```
 >> basis
 Number of frequency shifts M = 16
 Number of time shifts L = 16
