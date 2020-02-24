@@ -20,6 +20,12 @@ J = zeros(l0, l1);
 compressed = 0;
 total = 0;
 
+if (coefficient == 0)
+    J = I;
+    total = ll;
+    return;
+end
+
 % reshaping and calculating threshold
 H = abs(reshape(I, ll, 1));
 H = sort(H);
