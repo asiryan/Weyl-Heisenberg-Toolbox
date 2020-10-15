@@ -1,4 +1,4 @@
-# Weyl-Heisenberg Bases Toolbox
+# Weyl-Heisenberg bases toolbox
 
 This **MATLAB** toolbox was developed to study the **Weyl-Heisenberg bases** and their properties in the field of signal processing and compression in time-frequency domain. The toolbox includes m-files that allow the synthesis and analysis of forming WH-functions and their corresponding orthogonal bases.  
   
