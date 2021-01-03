@@ -13,8 +13,8 @@
 function [ a ] = phaseparam( M, L )
 N = M * L; % samples
 if (mod(N, 2) == 0)
-    a = M / 2 - 1; % conjugate N-symmetry
+    a = M./ 2;     % conjugate (N)-symmetry
 else
-    a = M / 2; % conjugate (N-1)-symmetry
+    a = M./ 2 - 1; % conjugate (N-1)-symmetry
 end
 end
