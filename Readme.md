@@ -33,6 +33,9 @@ Standard deviation = 0.0025
 ```
 <p align="center"><img width="60%" src="docs/basis.png" /></p>
 
+# Other implementations
+[UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
+
 # License
 **Apache License v2.0**  
 
