@@ -14,13 +14,11 @@ addpath('[...] /matlab/toolbox_samples')
 
 # Basis synthesis  
 Example of the bases construction: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
-Run sample script:  
+Run sample script *wh_filter.m*
 ```
->> basis
-Number of frequency shifts M = 16
-Number of time shifts L = 16
-Alfa-parameter = 8
-Standard deviation = 0.0025
+Number of frequency shifts M = 8
+Number of time shifts L = 8
+Beta-parameter = 1
 ```
 <p align="center"><img width="70%" src="docs/plot.svg" /></p>
 
