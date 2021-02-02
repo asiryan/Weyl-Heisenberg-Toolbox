@@ -13,7 +13,7 @@ addpath('[...] /matlab/toolbox_samples')
 We propose a new approach to raster image compression based on the use of an orthogonal WH basis specially optimized for the task of processing real images. To do this, we construct the two-dimensional real discrete **Weyl-Heisenberg transform** (DWHT), which has the property of orthogonality and the best time-frequency localization. We show that the DWHT provides better compression characteristics than other orthogonal bases - DCT and discrete Hartley transform (DHT). Moreover, we propose an image compression algorithm based on the JPEG ideas, but focused on DWHT.  
 
 # Othogonalization
-It is well known that the gaussian function is ideally localized in the time-frequency domain. However, the Weyl-Heisenberg basis built on gaussian function (Gabor basis) is not orthogonal. However, the use of a standard orthogonalization procedure, for example, the Gram-Schmidt process, will lead to a significant deterioration in the time-frequency localization, and, as a consequence, such an orthogonal Weyl-Heisenberg basis will not be optimal. In old papers, an algorithm is proposed for constructing an Weyl-Heisenberg basis using the spectral decomposition, but it is is not computationally efficient. In modern papers, algorithms for the synthesis of the forming WH-function based on discrete Wigner and Zak transforms.  
+It is well known that the gaussian function is ideally localized in the time-frequency domain. However, the Weyl-Heisenberg basis built on gaussian function (Gabor basis) is not orthogonal. However, the use of a standard orthogonalization procedure, for example, the Gram-Schmidt process, will lead to a significant deterioration in the time-frequency localization, and, as a consequence, such an orthogonal Weyl-Heisenberg basis will not be optimal. In old papers, an algorithm is proposed for constructing an Weyl-Heisenberg basis using the eigenvalue decomposition, but it is is not computationally efficient. In modern papers, algorithms for the synthesis of the forming WH-function based on discrete Wigner and Zak transforms.  
 This MATLAB toolbox includes all procedures of basis orthogonalizations. Run sample script ***wh_filter.m*** to construct bases orthogonal Weyl-Heisenberg basis using discrete Zak transform.  
 ```
 Number of frequency shifts M = 8
@@ -21,6 +21,19 @@ Number of time shifts L = 8
 Beta-parameter = 1
 ```
 <p align="center"><img width="70%" src="docs/plot.svg" /></p>
+
+# Construction
+This toolbox provides methods to construct Weyl-Heisenberg basis and its modifications.
+| Script | Orthogonal | Type | Dimension | Notation |
+|-------------|-------------|-------------|-------------|--------------|
+| gabor.m | no | complex | N x 2N | Gabor rectangular basis |
+| gaborc.m | no | complex | N x N | Gabor square basis |
+| gaborr.m | no | real | 2N x 2N | Gabor real basis |
+| weylhz.m | yes | complex | N x 2N | Weyl-Heisenberg rectangular basis  |
+| weylhzc.m | yes | complex | N x N | Weyl-Heisenberg square basis |
+| weylhzr.m | yes | real | 2N x 2N | Weyl-Heisenberg real basis  |
+| weylhzf.m | yes | complex | N x 2N | Weyl-Heisenberg basis (fast algorithm) |
+| weylhzf.m | yes | complex | N x 2N | Gram-Schmidt process product |
 
 # Other implementations
 [UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
