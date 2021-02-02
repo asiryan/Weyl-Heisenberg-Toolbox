@@ -1,5 +1,5 @@
 %% Weyl-Heisenberg Bases Toolbox
-% Script "comparison.m"
+% Script "wh_basis_comparison.m"
 %% Description:
 % Implements a comparison of two matrices of optimal Weyl-Heisenberg bases:
 % 1) synthesized using eigenvalue decomposition,
@@ -13,8 +13,8 @@
 %% Input
 M     = input('Number of frequency shifts M = ');
 L     = input('Number of time shifts L = ');
-a     = input('Alfa-parameter = ');
 sigma = input('Standard deviation = ');
+a     = phaseparam(M, L);
 
 %% Construction of the matrix of the Weyl-Heisenberg optimal basis using eigenvalue decomposition
 tic;

@@ -1,5 +1,5 @@
 %% Weyl-Heisenberg Bases Toolbox
-% Script "basis.m"
+% Script "wh_plot.m"
 %% Description:
 % Implements the construction of bases: Gabor and Weyl-Heisenberg, and also 
 % plots graphs of the frequency response and the impulse response.
@@ -16,15 +16,16 @@
 %% Input
 M     = input('Number of frequency shifts M = ');
 L     = input('Number of time shifts L = ');
-a     = input('Alfa-parameter = ');
 sigma = input('Standard deviation = ');
+a     = phaseparam(M, L);
 
 %% Bases construction
 % Construction of the Gabor basis:
 G = gabor(M, L, a, sigma); % Gabor matrix
 
 % Construction of the Weyl-Heisenberg basis:
-W = weylhzf(M, L, a, sigma); % W-H matrix
+W = weylhzc(M, L, a, sigma); % W-H matrix
+W = real(W) + imag(W);
 
 %% Plotting
 figure(1);

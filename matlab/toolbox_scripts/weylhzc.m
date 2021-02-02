@@ -19,8 +19,8 @@ N = M * L; % samples
 g = gaussian(N, sigma);
 
 %% 2. Obtaining the WH-function using fast synthesis algorithm
-%g = dzakt(g, M); % Discrete Zak-Transform
-g = wigner(g, M); % Discrete Wigner Transform
+g = dzakt(g, M); % Discrete Zak-Transform
+%g = wigner(g, M); % Discrete Wigner Transform
 
 %% 3. Complex basis: Gr[N, N] and Gi[N, N]
 [Gr, Gi] = gshell(g, M, a);

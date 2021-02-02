@@ -1,5 +1,5 @@
 %% Weyl-Heisenberg Bases Toolbox
-% Script "filterf.m"
+% Script "wh_filter.m"
 %% Description:
 % Implements the construction of frequency-time banks of Gabor and 
 % Weyl-Heisenberg filters, and also plots graphs of the frequency response 
@@ -14,8 +14,8 @@ beta  = input('Beta-parameter = ');
 N = L*M;
 sigma = sigmaparam(M, beta);
 alfa = phaseparam(M, L);
-disp(sigma);
-disp(alfa);
+disp(['Sigma: ', num2str(sigma)]);
+disp(['Alpha: ', num2str(alfa)]);
 
 %% Basis functions
 g = gaussian(N,sigma);
