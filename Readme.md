@@ -39,7 +39,7 @@ Standard deviation = 0.0025
 # References
 1. D. Petrov, V. Volchkov - Orthogonal well-localized Weyl-Heisenberg basis construction and optimization for multicarrier digital communication systems (2009).
 2. V. Volchkov, V. Sannikov - Algebraic approach to the optimal synthesis of real signal Weyl-Heisenberg bases (2018).
-3. H. Bolcskei, F. Hlawatsch - Discrete Zak Transforms, Polyphase Transforms, and Applications. IEEE Transactions on Signal Processing (1997).
+3. H. Bolcskei, F. Hlawatsch - Discrete Zak Transforms, Polyphase Transforms, and Applications (1997).
 4. A. Vahlin - Efficient Algorithms for Modulation and Demodulation in OFDM-Systems (2003).
 5. V. Volchkov et al. - Synthesis of Real Weyl-Heisenberg Signal Frames with Desired Frequency-Time Localization (2019).
 6. V. Asiryan et al. - Image Compression Using Discrete Weyl-Heisenberg Transform (2020).
