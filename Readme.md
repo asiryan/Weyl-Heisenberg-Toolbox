@@ -22,7 +22,7 @@ Number of time shifts L = 16
 Alfa-parameter = 8
 Standard deviation = 0.0025
 ```
-<p align="center"><img width="60%" src="docs/basis.png" /></p>
+<p align="center"><img width="60%" src="docs/plot.svg" /></p>
 
 # Other implementations
 [UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
