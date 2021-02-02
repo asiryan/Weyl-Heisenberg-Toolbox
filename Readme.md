@@ -12,9 +12,9 @@ addpath('[...] /matlab/toolbox_scripts')
 addpath('[...] /matlab/toolbox_samples')
 ```
 
-# Basis synthesis  
-Example of the bases construction: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
-Run sample script *wh_filter.m*
+# Othogonalization
+It is well known that the gaussian function is ideally localized in the time-frequency domain. However, the Weyl-Heisenberg basis built on gaussian function (Gabor basis) is not orthogonal. However, the use of a standard orthogonalization procedure, for example, the **Gram-Schmidt** process, will lead to a significant deterioration in the time-frequency localization, and, as a consequence, such an orthogonal Weyl-Heisenberg basis will not be optimal. In old papers, an algorithm is proposed for constructing an Weyl-Heisenberg basis using the **spectral decomposition**, but it is is not computationally efficient. In modern papers, algorithms for the synthesis of the forming WH-function based on discrete **Wigner** and **Zak transforms**.  
+Our MATLAB toolbox includes all procedures of basis orthogonalizations. Run sample script ***wh_filter.m*** to construct bases: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
 ```
 Number of frequency shifts M = 8
 Number of time shifts L = 8
