@@ -4,7 +4,7 @@ This **MATLAB** toolbox was developed to study the **Weyl-Heisenberg bases** and
 
 # Introduction
 Currently, the most important role int digital signal processing is played by discrete orthogonal transforms, which are actively used in various problems of digital filtering and spectral analysis. Meanwhile, the mathematical tools of discrete orthogonal transforms find their application in the field of data compression for the subsequent economy storage or transmission of information. An example is the discrete cosine transform (DCT), which has gained wide popularity and served as the basis for the development of information compression algorithms such as JPEG, MPEG, MP3, etc.  
-This article proposes and explores a new approach to raster image compression based on the use of an orthogonal WH basis specially optimized for the task of processing real images. To do this, we construct the two-dimensional real discrete **Weyl-Heisenberg transform** (DWHT), which has the property of orthogonality and the best time-frequency localization.  
+We propose a new approach to raster image compression based on the use of an orthogonal WH basis specially optimized for the task of processing real images. To do this, we construct the two-dimensional real discrete **Weyl-Heisenberg transform** (DWHT), which has the property of orthogonality and the best time-frequency localization. We show that the DWHT provides better compression characteristics than other orthogonal bases - DCT and discrete Hartley transform (DHT). Moreover, we propose a compression algorithm based on the JPEG ideas, but focused on DWHT.  
 
 # Installation
 Add to **MATLAB** path toolbox scripts and samples folders:  
@@ -12,14 +12,6 @@ Add to **MATLAB** path toolbox scripts and samples folders:
 addpath('[...] /matlab/toolbox_scripts')
 addpath('[...] /matlab/toolbox_samples')
 ```
-Run sample script:  
-```
->> plotgauss3
-Number of samples = 128
-Standard deviation = 0.00025
-```
-
-<p align="center"><img width="60%" src="docs/plotgauss3.png" /></p>
 
 # Basis synthesis  
 Example of the bases construction: Gabor (*non-orthogonal*) and Weyl-Heisenberg (*orthogonal*).  
