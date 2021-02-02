@@ -5,7 +5,7 @@ This MATLAB toolbox was developed to study the **Weyl-Heisenberg bases** and the
 # Introduction
 We propose a new approach to raster image compression based on the use of an orthogonal WH basis specially optimized for the task of processing real images. To do this, we construct the two-dimensional real discrete **Weyl-Heisenberg transform** (DWHT), which has the property of orthogonality and the best time-frequency localization. We show that the DWHT provides better compression characteristics than other orthogonal bases - DCT and discrete Hartley transform (DHT). Moreover, we propose an image compression algorithm based on the JPEG ideas, but focused on DWHT.  
 
-# Installation
+# Toolbox installation
 Add toolbox to your MATLAB path
 ```matlab  
 addpath('[...] /matlab/toolbox_scripts')
