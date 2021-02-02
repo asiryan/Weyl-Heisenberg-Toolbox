@@ -1,16 +1,16 @@
 # Weyl-Heisenberg Toolbox
 
-This **MATLAB** toolbox was developed to study the **Weyl-Heisenberg bases** and their properties in the field of signal processing and compression in time-frequency domain. The toolbox includes m-files that allow the synthesis and analysis of forming WH-functions and their corresponding orthogonal bases.
-  
-The classic procedure for the synthesis of Weyl-Heisenberg bases is described in detail in this [article](https://www.researchgate.net/publication/221003716_Orthogonal_well-localized_Weyl-Heisenberg_basis_construction_and_optimization_for_multicarrier_digital_communication_systems). The fast algorithm which uses discrete **Wigner transforms** is described in [paper](https://fruct.org/publications/fruct6/files/Pet.pdf) or **Zak-transforms** in [paper](https://ieeexplore.ieee.org/document/564174).  
+This **MATLAB** toolbox was developed to study the **Weyl-Heisenberg bases** and their properties in the field of signal processing and compression in time-frequency domain. The toolbox includes m-files that allow the synthesis and analysis of forming WH-functions and their corresponding orthogonal bases.  
 
-This toolbox contains the necessary set of tools for digital signal processing and image compression using discrete **Weyl-Heisenberg transform**, which was described [here](https://ieeexplore.ieee.org/document/9117707/).  
+# Introduction
+Currently, the most important role int digital signal processing is played by discrete orthogonal transforms, which are actively used in various problems of digital filtering and spectral analysis. Meanwhile, the mathematical tools of discrete orthogonal transforms find their application in the field of data compression for the subsequent economy storage or transmission of information. An example is the discrete cosine transform (DCT), which has gained wide popularity and served as the basis for the development of information compression algorithms such as JPEG, MPEG, MP3, etc.  
+This article proposes and explores a new approach to raster image compression based on the use of an orthogonal WH basis specially optimized for the task of processing real images. To do this, we construct the two-dimensional real discrete **Weyl-Heisenberg transform** (DWHT), which has the property of orthogonality and the best time-frequency localization.  
 
 # Installation
 Add to **MATLAB** path toolbox scripts and samples folders:  
 ```matlab  
-addpath('[...] /matlab/toolbox_scripts')  
-addpath('[...] /matlab/toolbox_samples')  
+addpath('[...] /matlab/toolbox_scripts')
+addpath('[...] /matlab/toolbox_samples')
 ```
 Run sample script:  
 ```
