@@ -26,12 +26,12 @@ Beta-parameter = 1
 This toolbox provides methods to construct Weyl-Heisenberg basis and its modifications.
 | Script | Orthogonal | Type | Dimension | Notation |
 |-------------|-------------|-------------|-------------|--------------|
-| [gabor.m](matlab/toolbox_scripts/gabor.m) | no | complex | N x 2N | Gabor rectangular basis |
-| [gaborc.m](matlab/toolbox_scripts/gaborc.m) | no | complex | N x N | Gabor square basis |
-| [gaborr.m](matlab/toolbox_scripts/gaborr.m) | no | real | 2N x 2N | Gabor real basis |
-| [weylhz.m](matlab/toolbox_scripts/weylhz.m) | yes | complex | N x 2N | Weyl-Heisenberg rectangular basis  |
-| [weylhzc.m](matlab/toolbox_scripts/weylhzc.m) | yes | complex | N x N | Weyl-Heisenberg square basis |
-| [weylhzr.m](matlab/toolbox_scripts/weylhzr.m) | yes | real | 2N x 2N | Weyl-Heisenberg real basis  |
+| [gabor.m](matlab/toolbox_scripts/gabor.m) | no | complex | N x 2N | Gabor basis (rectangular) |
+| [gaborc.m](matlab/toolbox_scripts/gaborc.m) | no | complex | N x N | Gabor basis (square) |
+| [gaborr.m](matlab/toolbox_scripts/gaborr.m) | no | real | 2N x 2N | Gabor basis (real) |
+| [weylhz.m](matlab/toolbox_scripts/weylhz.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (rectangular) |
+| [weylhzc.m](matlab/toolbox_scripts/weylhzc.m) | yes | complex | N x N | Weyl-Heisenberg basis (square) |
+| [weylhzr.m](matlab/toolbox_scripts/weylhzr.m) | yes | real | 2N x 2N | Weyl-Heisenberg basis (real) |
 | [weylhzf.m](matlab/toolbox_scripts/weylhzf.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (fast algorithm) |
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
 
