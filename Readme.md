@@ -26,14 +26,14 @@ Beta-parameter = 1
 This toolbox provides methods to construct Weyl-Heisenberg basis and its modifications.
 | Script | Orthogonal | Type | Dimension | Notation |
 |-------------|-------------|-------------|-------------|--------------|
-| gabor.m | no | complex | N x 2N | Gabor rectangular basis |
-| gaborc.m | no | complex | N x N | Gabor square basis |
-| gaborr.m | no | real | 2N x 2N | Gabor real basis |
-| weylhz.m | yes | complex | N x 2N | Weyl-Heisenberg rectangular basis  |
-| weylhzc.m | yes | complex | N x N | Weyl-Heisenberg square basis |
-| weylhzr.m | yes | real | 2N x 2N | Weyl-Heisenberg real basis  |
-| weylhzf.m | yes | complex | N x 2N | Weyl-Heisenberg basis (fast algorithm) |
-| weylhzf.m | yes | complex | N x 2N | Gram-Schmidt process product |
+| [gabor.m](matlab/toolbox_scripts/gabor.m) | no | complex | N x 2N | Gabor rectangular basis |
+| [gaborc.m](matlab/toolbox_scripts/gaborc.m) | no | complex | N x N | Gabor square basis |
+| [gaborr.m](matlab/toolbox_scripts/gaborr.m) | no | real | 2N x 2N | Gabor real basis |
+| [weylhz.m](matlab/toolbox_scripts/weylhz.m) | yes | complex | N x 2N | Weyl-Heisenberg rectangular basis  |
+| [weylhzc.m](matlab/toolbox_scripts/weylhzc.m) | yes | complex | N x N | Weyl-Heisenberg square basis |
+| [weylhzr.m](matlab/toolbox_scripts/weylhzr.m) | yes | real | 2N x 2N | Weyl-Heisenberg real basis  |
+| [weylhzf.m](matlab/toolbox_scripts/weylhzf.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (fast algorithm) |
+| [weylhzf.m](matlab/toolbox_scripts/weylhzf.m) | yes | complex | N x 2N | Gram-Schmidt process product |
 
 # Other implementations
 [UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
