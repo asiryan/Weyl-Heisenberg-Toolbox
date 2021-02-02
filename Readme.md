@@ -38,6 +38,3 @@ Standard deviation = 0.0025
 
 # License
 **Apache License v2.0**  
-
-# Referencess
-A full list of references is given in a separate [file](docs/references.pdf) (**primarily in Russian**).
