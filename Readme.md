@@ -46,5 +46,8 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 5. *V. Volchkov et al.* - Synthesis of Real Weyl-Heisenberg Signal Frames with Desired Frequency-Time Localization (2019).
 6. *V. Asiryan et al.* - Image Compression Using Discrete Weyl-Heisenberg Transform (2020).
 
+# Compression
+Coming soon at [USBEREIT](https://usbereit.ieeesiberia.org/) (IEEE 2021). 
+
 # License
 **Apache License v2.0**  
