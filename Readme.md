@@ -35,6 +35,9 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 | [weylhzf.m](matlab/toolbox_scripts/weylhzf.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (fast algorithm) |
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
 
+# Compression
+Coming soon at [USBEREIT](https://usbereit.ieeesiberia.org/) (IEEE 2021).
+
 # Other implementations
 [UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
 
@@ -45,9 +48,6 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 4. *A. Vahlin* - Efficient Algorithms for Modulation and Demodulation in OFDM-Systems (2003).
 5. *V. Volchkov et al.* - Synthesis of Real Weyl-Heisenberg Signal Frames with Desired Frequency-Time Localization (2019).
 6. *V. Asiryan et al.* - Image Compression Using Discrete Weyl-Heisenberg Transform (2020).
-
-# Compression
-Coming soon at [USBEREIT](https://usbereit.ieeesiberia.org/) (IEEE 2021). 
 
 # License
 **Apache License v2.0**  
