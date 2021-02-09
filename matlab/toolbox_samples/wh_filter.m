@@ -18,7 +18,10 @@ disp(['Sigma: ', num2str(sigma)]);
 disp(['Alpha: ', num2str(alfa)]);
 
 %% Basis functions
-g = gaussian(N,sigma);
+x = [0:1:N-1];
+g = (2.*sigma).^(0.25).*exp(-pi.*sigma*x.^2);
+disp(g');
+%g = cos(0:N-1);
 gopt = dzakt(g, M); % Discrete Zak-Transform
 %gopt = wigner(g, M); % Discrete Wigner Transform
 

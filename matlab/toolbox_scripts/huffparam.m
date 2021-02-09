@@ -16,7 +16,7 @@ z = length(symbols);
 % Get unique elements
 uni = unique(symbols);
 n = length(uni);
-disp(['Unique elements: ', num2str(n)]);
+%disp(['Unique elements: ', num2str(n)]);
 count = zeros(1,n);
 
 % Finding count of each element
@@ -31,7 +31,7 @@ for k = 1:n
     prob(k) = count(k)/z;
 end
 
-disp(['Summary of probabilities: ', num2str(sum(prob))])
+%disp(['Summary of probabilities: ', num2str(sum(prob))])
 
 % Huffman encoding
 dict = huffmandict(uni, prob);

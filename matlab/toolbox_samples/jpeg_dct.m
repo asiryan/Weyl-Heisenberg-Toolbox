@@ -7,15 +7,19 @@
 % image.
 %
 %% Input
-K = input('Compression factor K = ');
+R = input('Compression factor R = ');
 
 %% Properties
-set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman'); 
+set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman');
 set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman'); 
 
 %% Image matrix
-RGB = imread('Images/restaurant.png');
+RGB = imread('Images/barbara.png');
 I = double(rgb2gray(RGB));
+before = huffparam(I);
+disp('Huffman parameter (before compression)');
+disp(before);
+
 figure(1);
 imshow(uint8(I));
 title('Image');
@@ -49,25 +53,36 @@ N = fix(n./ r);
 M = fix(m./ l);
 
 % Block compression
-J = zeros(n, m);
-q = 0;
+Nnz = 0;
+stream = [];
 
 for i=1:N
    for j=1:M
        y = (i-1)*r+1;
        x = (j-1)*l+1;
        block = A(y:y+r-1,x:x+l-1);
-       Qblock = round(block ./ (K*Z));
+       Qblock = round(block ./ (R*Z));
        A(y:y+r-1,x:x+l-1) = Qblock;
        
        % summary of non-zero elements after quantization
        qblock = reshape(Qblock, [], 1);
-       q = q + sum(qblock~=0);
+       Nnz = Nnz + sum(qblock~=0);
+       
+       % stream filling (only theoretical)
+       for k=1:length(qblock)
+           if (qblock(k)~=0)
+               stream = [stream qblock(k)];
+           end
+       end
    end
 end
 
+after = huffparam(stream);
+disp('Huffman parameter (after compression)');
+disp(after);
+
 figure(2);
-imshow(uint8(A));
+imshow(uint8(A * 2));
 title('Forward DCT');
 
 %% Backward DCT
@@ -77,7 +92,7 @@ for i=1:N
        y = (i-1)*r+1;
        x = (j-1)*l+1;
        block = A(y:y+r-1,x:x+l-1);
-       A(y:y+r-1,x:x+l-1) = block .* (K*Z);
+       A(y:y+r-1,x:x+l-1) = block .* (R*Z);
    end
 end
 
@@ -91,10 +106,15 @@ title('Backward DCT');
 I = I + 128;
 X = I - B;
 figure(4);
-imshow(uint8(X));
+imshow(uint8(X*2));
 title('Difference');
 
 E = norm(X);
-R = 1.0 - q ./ (n * m);
-disp(['Norm of the matrices difference: ', num2str(E)]);
-disp(['Compression ratio: ', num2str(R)]);
+K = 1.0 - Nnz ./ (n * m);
+PSNR = psnr(uint8(B), uint8(I));
+bit = 1.0 - after/before;
+
+disp(['Compression ratio K: ', num2str(K)]);
+disp(['Bit criteria T: ', num2str(bit)]);
+disp(['PSNR (dB): ', num2str(PSNR)]);
+disp(['Quality losses, E: ', num2str(E)]);

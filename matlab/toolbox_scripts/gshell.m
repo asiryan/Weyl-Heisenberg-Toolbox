@@ -25,7 +25,8 @@ for n = 0 : N - 1
             i = mod(n - l * M, N);                      % time shift
             j = mod(n + fix(M / 2) - l * M, N);         % frequency shift
             p = 2 * pi * 1i * k / M * (n - a / 2);      % argument
-            
+           
+                
             Gr(n + 1, u + 1) =      g(i + 1) * exp(p);            
             Gi(n + 1, u + 1) = 1i * g(j + 1) * exp(p);
             % We are forced to add a unit to the element numbers of arrays,
