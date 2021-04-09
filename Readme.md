@@ -48,11 +48,18 @@ quantization coefficient R = 1, 4, 8. Figures 1-2 show, as an example, the resul
 <p align="center"><b>Figure 2.</b> Compression using DWHT (β = 2) for R = 1, 4, 8</p>  
 
 **Table 1.** Compression using DCT (JPEG)
-| Quantization coefficient, R | 1 | 4 | 8 |
-|:-----------|:-----------:|:-----------:|:-----------:|
-| Compression coefficient, K (%) | 83.73 | 93.82 | 96.63 |
-| PSNR (dB) | 32.53 | 26.26 | 23.92 |
-| Quality losses, E | 438.58 | 980.48 | 1399.16 |
+| Quantization coefficient, R | 1 | 2 | 4 | 8 | 16 | 32 |
+|:-----------|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| Compression coefficient, K (%) | 83.73 | 89.43 | 93.82 | 96.63 | 98.06 | 98.99 |
+| PSNR (dB) | 32.53 | 29.30 | 26.26 | 23.92 | 22.01 | 19.06 |
+| Quality losses, E | 438.58 | 660.72 | 980.48 | 1399.16 | 1601.70 | 3404.39 |
+
+**Table 2.** Compression using DWHT
+| Quantization coefficient, R | 1 | 2 | 4 | 8 | 16 | 32 |
+|:-----------|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| Compression coefficient, K (%) | 86.18 | 91.22 | 94.62 | 96.73 | 97.94 | 98.56 |
+| PSNR (dB) | 34.19 | 31.19 | 28.27 | 25.57 | 23.48 | 21.91 | 
+| Quality losses, E | 326.86 | 494.31 | 737.01 | 1073.84 | 1451.38 | 1796.39 |
 
 # Other implementations
 [UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
