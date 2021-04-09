@@ -37,7 +37,7 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
 
 # Compression
-This toolbox includes a new approach to image compression based on the discrete Weyl-Heisenberg transform. Comparison of our technique and the original JPEG (DCT-based) algorithm for different values of the quantization coefficient *R* is presented below. Figures 1-2 show, as an example, the results of compressing the same image [barbara.png](matlab/toolbox_samples/Images/barbara.png) (512×512 pixels) at *R* = 1, 4, 8 using DCT (JPEG) and DWHT, and Tables 1-2 show extended numerical results.
+This toolbox includes a new approach to image compression based on the discrete Weyl-Heisenberg transform. Comparison of our technique and the original JPEG (DCT-based) algorithm for different values of the quantization coefficient *R* is presented below. Figures 1-2 show, as an example, the results of compressing the same image [barbara.png](matlab/toolbox_samples/Images/barbara.png) (512×512 pixels) at *R* = 1, 4, 8 using [DCT](matlab/toolbox_samples/jpeg_dct.m) (JPEG) and [DWHT](matlab/toolbox_samples/jpeg_dwht.m), and Tables 1-2 show extended numerical results.
 
 <p align="center"><img width="70%" src="docs/dct.png"/></p>  
 <p align="center"><b>Figure 1.</b> Compression using DCT (JPEG) for <i>R</i> = 1, 4, 8</p>  
