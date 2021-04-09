@@ -14,6 +14,7 @@ We propose a new approach to raster image compression based on the use of an ort
 
 # Orthogonalization
 It is well known that the gaussian function is ideally localized in the time-frequency domain. However, the Weyl-Heisenberg basis built on gaussian function (Gabor basis) is not orthogonal. However, the use of a standard orthogonalization procedure, for example, the Gram-Schmidt process, will lead to a significant deterioration in the time-frequency localization, and, as a consequence, such an orthogonal Weyl-Heisenberg basis will not be optimal. In old papers, an algorithm is proposed for constructing an Weyl-Heisenberg basis using the eigenvalue decomposition, but it is is not computationally efficient. We present fast algorithm for the synthesis of the forming WH-function based on discrete [Zak](matlab/toolbox_scripts/dzakt.m) transform.  
+   
 This MATLAB toolbox includes all procedures of basis orthogonalizations. Run sample [script](matlab/toolbox_scripts/wh_filter.m) to construct Gabor and Weyl-Heisenberg bases.  
 ```
 Number of frequency shifts M = 8
