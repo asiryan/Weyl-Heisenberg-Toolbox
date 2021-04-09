@@ -36,7 +36,11 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
 
 # Compression
-Coming soon at [USBEREIT](https://usbereit.ieeesiberia.org/) (IEEE 2021).
+<p align="center"><img width="70%" src="docs/dct.png"/></p>  
+<p align="center"><b>Figure 1.</b> Compression using DCT (JPEG) for R = 1, 4, 8</p>  
+
+<p align="center"><img width="70%" src="docs/dwht.png"/></p>  
+<p align="center"><b>Figure 2.</b> Compression using DWHT (β = 2) for R = 1, 4, 8</p>  
 
 # Other implementations
 [UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
@@ -48,6 +52,7 @@ Coming soon at [USBEREIT](https://usbereit.ieeesiberia.org/) (IEEE 2021).
 4. *A. Vahlin* - Efficient Algorithms for Modulation and Demodulation in OFDM-Systems (2003).
 5. *V. Volchkov et al.* - Synthesis of Real Weyl-Heisenberg Signal Frames with Desired Frequency-Time Localization (2019).
 6. *V. Asiryan et al.* - Image Compression Using Discrete Weyl-Heisenberg Transform (2020).
+7. *V. Asiryan et al.* - Weyl-Heisenberg Transform Capabilities in JPEG Compression Standard (2021).
 
 # License
 **Apache License v2.0**  
