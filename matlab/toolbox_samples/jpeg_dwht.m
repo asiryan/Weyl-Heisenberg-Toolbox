@@ -16,9 +16,9 @@ set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 %% Image matrix
 RGB = imread('Images/barbara.png');
 I = double(rgb2gray(RGB));
-before = huffparam(I);
-disp('Huffman parameter (before compression)');
-disp(before);
+% before = huffparam(I);
+% disp('Huffman parameter (before compression)');
+% disp(before);
 
 figure(1);
 imshow(uint8(I));
@@ -33,19 +33,18 @@ a = phaseparam(M, L);             % alfa-parameter
 
 %% Construction of transform matrix
 W = weylhzc(M, L, a, sigma);
-%W = real(W) + imag(W);
+W = real(W) - imag(W);
 W = W';
 
 % optional transform (only for figure) 
-N = M * L;
-W0 = W(1:N/2,:);
-W1 = W(N/2+1:N,:);
-W = [W1;W0];
+% N = M * L;
+% W0 = W(1:N/2,:);
+% W1 = W(N/2+1:N,:);
+% W = [W1;W0];
 
 %% Forward DWHT
 I = I - 128;
 A = bdt(I, W);
-A = real(A) - imag(A);
 
 z = [2:2:M];
 z = [z flip(z)]'; 
@@ -77,18 +76,18 @@ for i=1:N
        qblock = reshape(Qblock, [], 1);
        Nnz = Nnz + sum(qblock~=0);
        
-       % stream filling (only theoretical)
-       for k=1:length(qblock)
-           if (qblock(k)~=0)
-               stream = [stream qblock(k)];
-           end
-       end
+%        % stream filling (only theoretical)
+%        for k=1:length(qblock)
+%            if (qblock(k)~=0)
+%                stream = [stream qblock(k)];
+%            end
+%        end
    end
 end
 
-after = huffparam(stream);
-disp('Huffman parameter (after compression)');
-disp(after);
+% after = huffparam(stream);
+% disp('Huffman parameter (after compression)');
+% disp(after);
 
 figure(2);
 imshow(uint8(A));
@@ -106,7 +105,6 @@ for i=1:N
 end
 
 B = ibdt(A, W);
-B = real(B) + imag(B);
 B = B + 128;
 figure(3);
 imshow(uint8(B));
@@ -122,9 +120,9 @@ title('Difference');
 E = norm(X);
 K = 1.0 - Nnz ./ (n * m);
 PSNR = psnr(uint8(B), uint8(I));
-bit = 1.0 - after/before;
+%bit = 1.0 - after/before;
 
 disp(['Compression ratio K: ', num2str(K)]);
-disp(['Bit criteria T: ', num2str(bit)]);
+%disp(['Bit criteria T: ', num2str(bit)]);
 disp(['PSNR (dB): ', num2str(PSNR)]);
 disp(['Quality losses, E: ', num2str(E)]);

@@ -13,14 +13,13 @@
 %% Output:
 % G - Weyl-Heisenberg matrix [N, 2N].
 function [ G ] = weylhzc( M, L, a, sigma )
-N = M * L; % samples
+N = M * L;
 
 %% 1. Discretization
 g = gaussian(N, sigma);
 
 %% 2. Obtaining the WH-function using fast synthesis algorithm
-g = dzakt(g, M); % Discrete Zak-Transform
-%g = wigner(g, M); % Discrete Wigner Transform
+g = dzakt(g, M);
 
 %% 3. Complex basis: Gr[N, N] and Gi[N, N]
 [Gr, Gi] = gshell(g, M, a);

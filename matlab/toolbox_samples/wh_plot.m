@@ -19,6 +19,7 @@ L     = input('Number of time shifts L = ');
 sigma = input('Standard deviation = ');
 a     = phaseparam(M, L);
 index = input('Function index [1, N] = ');
+N = M * L;
 
 %% Bases construction
 % Construction of the Gabor basis:
@@ -26,7 +27,7 @@ G = gabor(M, L, a, sigma); % Gabor matrix
 
 % Construction of the Weyl-Heisenberg basis:
 W = weylhz(M, L, a, sigma); % W-H matrix
-W = real(W) + imag(W);
+%W = real(W) + imag(W);
 
 %% Plotting
 figure(1);
@@ -38,13 +39,13 @@ TP0 = abs(G);
 TP1 = abs(W);
 subplot(2,1,1);
 hold on;
-plot(TP0(:,index),'k--','linewidth',2);
-plot(TP1(:,index),'r-','linewidth',2);
+plot(TP0(:,mod(index+M/2,N)),'k--','linewidth',2);
+plot(TP1(:,mod(index+M/2,N)),'r-','linewidth',2);
+legend('Gabor basis', ' WH-basis');
 grid on;
 title('Time domain');
 ylabel('Amplitude');
 xlabel('Samples, n');
-legend('Gabor basis', ' WH-basis');
 hold off;
 
 % Frequency domain
@@ -52,8 +53,8 @@ SP0 = abs(fft(G));
 SP1 = abs(fft(W));
 subplot(2,1,2);
 hold on;
-plot(SP0(:,index),'k--','linewidth',2);
-plot(SP1(:,index),'r-','linewidth',2);
+plot(SP0(:,mod(index+M/2,N)),'k--','linewidth',2);
+plot(SP1(:,mod(index+M/2,N)),'r-','linewidth',2);
 legend('Gabor basis', ' WH-basis');
 grid on;
 title('Frequency domain');

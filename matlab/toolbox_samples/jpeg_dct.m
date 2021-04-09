@@ -16,9 +16,9 @@ set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 %% Image matrix
 RGB = imread('Images/barbara.png');
 I = double(rgb2gray(RGB));
-before = huffparam(I);
-disp('Huffman parameter (before compression)');
-disp(before);
+%before = huffparam(I);
+%disp('Huffman parameter (before compression)');
+%disp(before);
 
 figure(1);
 imshow(uint8(I));
@@ -41,6 +41,7 @@ Z = [16,11,10,16,24,40,51,61;
     24,35,55,64,81,104,113,92;
     49,64,78,87,103,121,120,101;
     72,92,95,98,112,100,103,99];
+Z = 1;
 
 disp('Quantization matrix:');
 disp(Z);
@@ -69,20 +70,20 @@ for i=1:N
        Nnz = Nnz + sum(qblock~=0);
        
        % stream filling (only theoretical)
-       for k=1:length(qblock)
-           if (qblock(k)~=0)
-               stream = [stream qblock(k)];
-           end
-       end
+%        for k=1:length(qblock)
+%            if (qblock(k)~=0)
+%                stream = [stream qblock(k)];
+%            end
+%        end
    end
 end
 
-after = huffparam(stream);
-disp('Huffman parameter (after compression)');
-disp(after);
+%after = huffparam(stream);
+%disp('Huffman parameter (after compression)');
+%disp(after);
 
 figure(2);
-imshow(uint8(A * 2));
+imshow(uint8(A));
 title('Forward DCT');
 
 %% Backward DCT
@@ -112,9 +113,9 @@ title('Difference');
 E = norm(X);
 K = 1.0 - Nnz ./ (n * m);
 PSNR = psnr(uint8(B), uint8(I));
-bit = 1.0 - after/before;
+%bit = 1.0 - after/before;
 
 disp(['Compression ratio K: ', num2str(K)]);
-disp(['Bit criteria T: ', num2str(bit)]);
+%disp(['Bit criteria T: ', num2str(bit)]);
 disp(['PSNR (dB): ', num2str(PSNR)]);
 disp(['Quality losses, E: ', num2str(E)]);
