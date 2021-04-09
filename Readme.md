@@ -45,14 +45,12 @@ quantization coefficient R = 1, 4, 8. Figures 1-2 show, as an example, the resul
 <p align="center"><b>Figure 1.</b> Compression using DCT (JPEG) for R = 1, 4, 8</p>  
 
 .center[ 
-
 **Table 1.** Compression using DCT (JPEG)
 | Quantization coefficient, R | 1 | 4 | 8 |
 |:-----------|:-----------:|:-----------:|:-----------:|
 | Compression coefficient, K (%) | 83.73 | 93.82 | 96.63 |
 | PSNR (dB) | 32.53 | 26.26 | 23.92 |
 | Quality losses, E | 438.58 | 980.48 | 1399.16 |
-
 ]
 
 <p align="center"><img width="70%" src="docs/dwht.png"/></p>  
