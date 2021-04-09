@@ -36,8 +36,20 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
 
 # Compression
+
+To compare DCT (according to the JPEG specification) and DWHT (at β = 2) in the problem of image compression, modeling was carried out for different values of the 
+quantization coefficient R = 1, 4, 8. Figures 1-2 show, as an example, the results of compressing the same image "barbara.png" (512×512 pixels) at R = 1, 4, 8 using DCT 
+(JPEG) and DWHT, and Tables 1-2 the corresponding numerical results are presented.
+
 <p align="center"><img width="70%" src="docs/dct.png"/></p>  
 <p align="center"><b>Figure 1.</b> Compression using DCT (JPEG) for R = 1, 4, 8</p>  
+
+**Table 1.** Compression using DCT (JPEG)
+| Quantization coefficient, R | 1 | 4 | 8 |
+|-------------|-------------|-------------|-------------|
+| Compression coefficient, K (%) | 83.73 | 93.82 | 96.63 |
+| PSNR (dB) | 32.53 | 26.26 | 23.92 |
+| Quality losses, E | 438.58 | 980.48 | 1399.16 |
 
 <p align="center"><img width="70%" src="docs/dwht.png"/></p>  
 <p align="center"><b>Figure 2.</b> Compression using DWHT (β = 2) for R = 1, 4, 8</p>  
