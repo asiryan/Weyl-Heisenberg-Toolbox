@@ -13,7 +13,7 @@ addpath('[...] /matlab/toolbox_samples')
 We propose a new approach to raster image compression based on the use of an orthogonal WH basis specially optimized for the task of processing real images. To do this, we construct the two-dimensional real discrete **Weyl-Heisenberg transform** (DWHT), which has the property of orthogonality and the best time-frequency localization. We show that the DWHT provides better compression characteristics than other orthogonal bases - DCT and discrete Hartley transform (DHT). Moreover, we propose an image compression algorithm based on the JPEG ideas, but focused on DWHT.  
 
 # Orthogonalization
-It is well known that the gaussian function is ideally localized in the time-frequency domain. However, the Weyl-Heisenberg basis built on gaussian function (Gabor basis) is not orthogonal. However, the use of a standard orthogonalization procedure, for example, the Gram-Schmidt process, will lead to a significant deterioration in the time-frequency localization, and, as a consequence, such an orthogonal Weyl-Heisenberg basis will not be optimal. In old papers, an algorithm is proposed for constructing an Weyl-Heisenberg basis using the eigenvalue decomposition, but it is is not computationally efficient. In modern papers, algorithm for the synthesis of the forming WH-function based on discrete [Zak](matlab/toolbox_scripts/dzakt.m) transform.  
+It is well known that the gaussian function is ideally localized in the time-frequency domain. However, the Weyl-Heisenberg basis built on gaussian function (Gabor basis) is not orthogonal. However, the use of a standard orthogonalization procedure, for example, the Gram-Schmidt process, will lead to a significant deterioration in the time-frequency localization, and, as a consequence, such an orthogonal Weyl-Heisenberg basis will not be optimal. In old papers, an algorithm is proposed for constructing an Weyl-Heisenberg basis using the eigenvalue decomposition, but it is is not computationally efficient. We present fast algorithm for the synthesis of the forming WH-function based on discrete [Zak](matlab/toolbox_scripts/dzakt.m) transform.  
 This MATLAB toolbox includes all procedures of basis orthogonalizations. Run sample [script](matlab/toolbox_scripts/wh_filter.m) to construct Gabor and Weyl-Heisenberg bases.  
 ```
 Number of frequency shifts M = 8
@@ -36,10 +36,7 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
 
 # Compression
-
-To compare DCT (according to the JPEG specification) and DWHT (at β = 2) in the problem of image compression, modeling was carried out for different values of the 
-quantization coefficient R = 1, 4, 8. Figures 1-2 show, as an example, the results of compressing the same image "barbara.png" (512×512 pixels) at R = 1, 4, 8 using DCT 
-(JPEG) and DWHT, and Tables 1-2 the corresponding numerical results are presented.
+This toolbox includes a new approach to image compression based on the discrete Weyl-Heisenberg transform. Below is a comparison of our technique and the original JPEG (DCT-based) algorithm for different values of the quantization coefficient *R*. Figures 1-2 show, as an example, the results of compressing the same image "barbara.png" (512×512 pixels) at R = 1, 4, 8 using DCT (JPEG) and DWHT, and Tables 1-2 show extended numerical results.
 
 <p align="center"><img width="70%" src="docs/dct.png"/></p>  
 <p align="center"><b>Figure 1.</b> Compression using DCT (JPEG) for R = 1, 4, 8</p>  
