@@ -52,7 +52,7 @@ This toolbox includes a new approach to image compression based on the discrete 
 | PSNR (dB) | 32.53 | 29.30 | 26.26 | 23.92 | 22.01 | 19.06 |
 | Quality losses, *E* | 438.58 | 660.72 | 980.48 | 1399.16 | 1601.70 | 3404.39 |
 
-**Table 2.** Compression using DWHT
+**Table 2.** Compression using DWHT (β = 2)
 | Quantization coefficient, *R* | 1 | 2 | 4 | 8 | 16 | 32 |
 |:-----------|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | Compression coefficient, *K* (%) | 86.18 | 91.22 | 94.62 | 96.73 | 97.94 | 98.56 |
