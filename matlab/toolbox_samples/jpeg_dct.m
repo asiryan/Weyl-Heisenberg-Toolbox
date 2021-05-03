@@ -15,15 +15,18 @@ set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 
 %% Image matrix
 RGB = imread('Images/barbara.png');
-I = double(rgb2gray(RGB));
-%before = huffparam(I);
-%disp('Huffman parameter (before compression)');
-%disp(before);
 
 figure(1);
-imshow(uint8(I));
+imshow(RGB);
 title('Image');
+
+%% RGB 2 Gray
+I = double(rgb2gray(RGB));
 [n, m] = size(I);
+
+before = huffparam(I);
+disp('Huffman parameter (before compression)');
+disp(before);
 
 %% Basis params
 M = 8;
@@ -33,6 +36,7 @@ W = dctmtx(M);
 I = I - 128;
 A = bdt(I, W);
 
+%% Quantization
 Z = [16,11,10,16,24,40,51,61;
     12,12,14,19,26,58,60,55;
     14,13,16,24,40,57,69,56;
@@ -54,7 +58,6 @@ M = fix(m./ l);
 
 % Block compression
 Nnz = 0;
-stream = [];
 
 for i=1:N
    for j=1:M
@@ -67,19 +70,12 @@ for i=1:N
        % summary of non-zero elements after quantization
        qblock = reshape(Qblock, [], 1);
        Nnz = Nnz + sum(qblock~=0);
-       
-       % stream filling (only theoretical)
-%        for k=1:length(qblock)
-%            if (qblock(k)~=0)
-%                stream = [stream qblock(k)];
-%            end
-%        end
    end
 end
 
-%after = huffparam(stream);
-%disp('Huffman parameter (after compression)');
-%disp(after);
+after = huffparam(A);
+disp('Huffman parameter (after compression)');
+disp(after);
 
 figure(2);
 imshow(uint8(A));
@@ -112,9 +108,9 @@ title('Difference');
 E = norm(X);
 K = 1.0 - Nnz ./ (n * m);
 PSNR = psnr(uint8(B), uint8(I));
-%bit = 1.0 - after/before;
+bit = 1.0 - after/before;
 
 disp(['Compression ratio K: ', num2str(K)]);
-%disp(['Bit criteria T: ', num2str(bit)]);
+disp(['Bit criteria T: ', num2str(bit)]);
 disp(['PSNR (dB): ', num2str(PSNR)]);
 disp(['Quality losses, E: ', num2str(E)]);
