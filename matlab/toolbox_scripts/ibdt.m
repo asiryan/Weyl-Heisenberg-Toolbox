@@ -1,5 +1,5 @@
-%% Weyl-Heisenberg Bases Toolbox
-% Function "bdt.m"
+%% Weyl-Heisenberg Toolbox
+% Function "ibdt.m"
 %% Description:
 % Backward block orthogonal discrete transform.
 %
@@ -21,7 +21,7 @@ M = fix(n ./ l);
 % output matrix
 J = zeros(n, m);
 
-% Block discrete orthogonal transform
+% block discrete orthogonal transform
 for i=1:N
    for j=1:M
        y = (i-1)*r+1;

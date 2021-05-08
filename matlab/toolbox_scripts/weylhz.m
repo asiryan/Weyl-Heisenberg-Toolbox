@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "weylhz.m"
 %% Description:
 % Constructs the rectangular complex matrix of the Weyl-Heisenberg basis
@@ -22,7 +22,7 @@ N2 = N * 2;
 Gb = gaborr(M, L, a, sigma);
 
 %% 2. Eigenvalue decomposition
-[S, A, Sx] = svd(Gb * Gb');
+[S, A, ~] = svd(Gb * Gb');
 
 %% 3. Calculating matrices E, W:
 E = sqrtm(A); % square root
@@ -32,12 +32,12 @@ W = Gb' * S / E;
 Vopt = S * W';
 
 %% 5. Block decomposition of matrix:    
-%                                       Vîïò = |V1îïò| => [N, 2N]
-%                                              |V2îïò| => [N, 2N]
+%                                       Vîïò = |V1opt| => [N, 2N]
+%                                              |V2opt| => [N, 2N]
 V1 = Vopt(  1: N,:);
 V2 = Vopt(N+1:N2,:);
  
 %% 6. Weyl-Heisenberg matrix:
-% Uîïò = V1îïò + j * V2îïò =>[N, 2N]
+% U = V1 + j * V2 =>[N, 2N]
 W = V1 + 1i * V2;
 end

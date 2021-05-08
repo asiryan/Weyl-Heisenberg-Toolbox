@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "jpeg_dwht.m"
 %% Description:
 % Implements JPEG compression algorithm of a monochrome image using the 
@@ -17,7 +17,7 @@ set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 RGB = imread('Images/barbara.png');
 
 figure(1);
-imshow(uint8(I));
+imshow(uint8(RGB));
 title('Image');
 
 %% RGB 2 Gray
@@ -35,8 +35,7 @@ L = n/M;                          % number of time shifts
 a = phaseparam(M, L);             % alfa-parameter
 
 % Construction of transform matrix
-W = weylhzc(M, L, a, sigma);
-W = real(W) - imag(W);
+W = weylhzh(M, L, a, sigma);
 W = W';
 
 %% Forward DWHT

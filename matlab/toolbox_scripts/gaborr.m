@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "gaborr.m"
 %% Description:
 % Constructs the square real matrix of the Gabor basis.

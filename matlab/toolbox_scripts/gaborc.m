@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "gaborc.m"
 %% Description:
 % Constructs the square complex matrix of the Gabor basis.

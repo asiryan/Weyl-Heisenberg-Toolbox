@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "im_dft.m"
 %% Description:
 % Implements DFT of a monochrome image.

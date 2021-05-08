@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "wh_filter.m"
 %% Description:
 % Implements the construction of frequency-time banks of Gabor and 
@@ -14,16 +14,12 @@ beta  = input('Beta-parameter = ');
 N = L*M;
 sigma = sigmaparam(M, beta);
 alfa = phaseparam(M, L);
-disp(['Sigma: ', num2str(sigma)]);
-disp(['Alpha: ', num2str(alfa)]);
+disp(sigma);
+disp(alfa);
 
 %% Basis functions
-x = [0:1:N-1];
-g = (2.*sigma).^(0.25).*exp(-pi.*sigma*x.^2);
-disp(g');
-%g = cos(0:N-1);
-gopt = dzakt(g, M); % Discrete Zak-Transform
-%gopt = wigner(g, M); % Discrete Wigner Transform
+g = tgvec(N,sigma);
+gopt = dzakt(g, M);
 
 %% Plotting
 figure(1);
@@ -45,8 +41,8 @@ hold off;
 % Frequency response
 subplot(2,1,2);
 hold on;
-plot(abs(ufft(g)),'k--','linewidth',2);
-plot(abs(ufft(gopt)),'r-','linewidth',2);
+plot(abs(fft(g)),'k--','linewidth',2);
+plot(abs(fft(gopt)),'r-','linewidth',2);
 grid on;
 title('Frequency domain');
 ylabel('Amplitude');

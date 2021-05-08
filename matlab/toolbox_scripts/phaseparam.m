@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "phaseparam.m"
 %% Description:
 % The function of determining the optimal phase parameter depending on the type

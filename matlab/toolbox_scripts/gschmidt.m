@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "gschmidt.m"
 %% Description:
 % Gram-Schmidt square matrix orthogonalization function.

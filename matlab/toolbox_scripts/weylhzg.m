@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "weylhzg.m"
 %% Description:
 % Constructs the rectangular complex matrix of the Weyl-Heisenberg basis

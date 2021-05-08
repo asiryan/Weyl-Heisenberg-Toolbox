@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "huffparam.m"
 %% Description:
 % Huffman encoding parameter function of array elements.
@@ -16,8 +16,8 @@ z = length(symbols);
 % Get unique elements
 uni = unique(symbols);
 n = length(uni);
-%disp(['Unique elements: ', num2str(n)]);
 count = zeros(1,n);
+%disp(['Unique elements: ', num2str(n)]);
 
 % Finding count of each element
 for k = 1:n

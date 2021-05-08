@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "gb_plot.m"
 %% Description:
 % Implements the construction of Gabor basis, and also 

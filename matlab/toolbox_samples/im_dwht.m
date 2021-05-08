@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "im_dwht.m"
 %% Description:
 % Implements DWHT of a monochrome image.
@@ -22,15 +22,8 @@ L = n/M;                          % number of time shifts
 a = phaseparam(M, L);             % alfa-parameter
 
 %% Construction of transform matrix
-W = weylhzc(M, L, a, sigma);
-W = real(W) - imag(W);
+W = weylhzh(M, L, a, sigma);
 W = W';
-
-% optional transform (only for figure) 
-%N = M * L;
-%W0 = W(1:N/2,:);
-%W1 = W(N/2+1:N,:);
-%W = [W1;W0];
 
 %% Forward DWHT
 A = W * I * W';

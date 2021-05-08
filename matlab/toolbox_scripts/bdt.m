@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "bdt.m"
 %% Description:
 % Forward block orthogonal discrete transform.

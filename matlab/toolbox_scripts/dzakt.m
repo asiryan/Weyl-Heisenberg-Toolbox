@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "dzakt.m"
 %% Description:
 % Function that implements a fast algorithm of orthogonalization
@@ -13,28 +13,48 @@
 function [ gopt ] = dzakt( g, M )
 N  = length(g); % samples
 L  = N / M;     % number of time shifts
-L2 = L * 2;
-G  = zeros(L2,N);
-dZ = zeros(L2,N);
+L2 = L * 2; 
+M2 = M / 2;
+G  = zeros(M2,L2);
+Zo = zeros(M2,L2);
 gopt = zeros( 1,N);
 
-%% 1. Forward discrete Zak transform
+%% 1. Forward Zak-transform
 % Construction of shift matrix
-for i = 0:1:L2-1
-    for j = 0:1:N-1
-        G(i+1,j+1) = g(mod(j+fix(M/2)*i,N)+1);
+for i=0:1:M2-1
+    for j=0:1:L2-1
+        G(i+1,j+1) = g(mod(i+fix(M/2)*j,N)+1);
+    end
+end
+G = G.';
+
+% Forward Fourier transform
+Z = fft(G);
+Z = Z.';
+
+%% 2. Construction of orthogonal matrix
+for n=1:M2
+    for k=1:L2
+        if (k<L+1)
+            Zo(n,k)=2.*Z(n,k)./sqrt(M.*(abs(Z(n,k)).^2+abs(Z(n,L2+k-L)).^2));  
+        else
+            Zo(n,k)=2.*Z(n,k)./sqrt(M.*(abs(Z(n,k)).^2+abs(Z(n,   k-L)).^2));  
+        end
     end
 end
 
-% Forward Fourier transform
-F = dftmtx(L2); % Fourier matrix (2L, 2L)
-Z = F * G; % DFT
-%Z = fft(G); % FFT
+%% 3. Backward Zak-transform
+% Backward Fourier transform
+Zo = Zo.';
+Go = ifft(Zo);
+Go = Go.';
 
-%% 2. Construction of orthogonal matrix
-dZ(  1:L ,:) = Z(L+1:L2,:);
-dZ(L+1:L2,:) = Z(  1:L ,:);
-Zo = 2.*Z./sqrt(M.*abs(Z).^2 + M.*abs(dZ).^2);
-
-%% 3. Backward discrete Zak transform
-gopt(:) = sum(Zo)./(L2);
+%% 4. Obtaining an output WH-function
+i=1;
+for k=1:L2
+    for n=1:M2
+        gopt(1,i)=Go(n,k);
+        i=i+1;
+    end
+end
+end

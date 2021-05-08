@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "jpeg_dct.m"
 %% Description:
 % Implements JPEG compression algorithm of a monochrome image using the 

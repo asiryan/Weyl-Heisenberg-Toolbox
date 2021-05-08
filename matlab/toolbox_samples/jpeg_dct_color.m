@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "jpeg_dct_color.m"
 %% Description:
 % Implements JPEG compression algorithm of a color image using the 
@@ -11,10 +11,10 @@ R = input('Compression factor R = ');
 
 %% Properties
 set(0,'DefaultTextFontSize',11,'DefaultTextFontName','Times New Roman');
-set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman'); 
+set(0,'DefaultAxesFontSize',11,'DefaultAxesFontName','Times New Roman');
 
 %% Image matrix
-RGB = imread('Images/venice.png');
+RGB = imread('Images/lena512.png');
 
 figure(1);
 imshow(RGB);

@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "wh_plot.m"
 %% Description:
 % Implements the construction of bases: Gabor and Weyl-Heisenberg, and also 
@@ -26,8 +26,7 @@ N = M * L;
 G = gabor(M, L, a, sigma); % Gabor matrix
 
 % Construction of the Weyl-Heisenberg basis:
-W = weylhz(M, L, a, sigma); % W-H matrix
-%W = real(W) + imag(W);
+W = weylhz(M, L, a, sigma);
 
 %% Plotting
 figure(1);

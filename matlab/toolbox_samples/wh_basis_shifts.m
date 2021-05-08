@@ -1,5 +1,5 @@
-%% Weyl-Heisenberg Basis Components
-% Script "shifts.m"
+%% Weyl-Heisenberg Components
+% Script "wh_basis_shifts.m"
 %% Description:
 % Visualizes the time and frequency shifts of the optimal Weyl-Heisenberg 
 % basis.
@@ -27,7 +27,6 @@ W = weylhzc(M, L, a, sigma);
 % Time domain
 TP0 = real(W);
 
-%set(0,'DefaultAxesFontSize',9,'DefaultAxesFontName','Arial');
 set(0,'DefaultTextFontSize',10,'DefaultTextFontName','Times New Roman');
 
 figure(1);

@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Script "wh_basis_comparison.m"
 %% Description:
 % Implements a comparison of two matrices of optimal Weyl-Heisenberg bases:

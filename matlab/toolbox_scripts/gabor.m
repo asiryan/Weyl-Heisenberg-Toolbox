@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "gabor.m"
 %% Description:
 % Constructs the rectangular complex matrix of the Gabor basis.
@@ -18,7 +18,7 @@ function [ G ] = gabor( M, L, a, sigma )
 N = M * L; % samples
 
 %% 1. Discretization
-g = gaussian(N, sigma);
+g = tgvec(N, sigma);
 
 %% 2. Complex basis: Gr[N, N] and Gi[N, N]
 [Gr, Gi] = gshell(g, M, a);

@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "heizparam.m"
 %% Description:
 % Heisenberg parameter calculation function (Heisenberg rectangle area)

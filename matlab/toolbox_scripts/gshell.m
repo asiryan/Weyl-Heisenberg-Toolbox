@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "gshell.m"
 %% Description:
 % Constructs the basis shell: complex matrices [Gr] and [Gi].

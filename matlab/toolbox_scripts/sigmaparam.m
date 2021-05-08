@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "sigmaparam.m"
 %% Description:
 % The function of determining the mean square Gaussian depending on

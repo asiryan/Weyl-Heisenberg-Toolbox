@@ -1,4 +1,4 @@
-%% Weyl-Heisenberg Bases Toolbox
+%% Weyl-Heisenberg Toolbox
 % Function "proj.m"
 %% Description:
 % Finds the projection of the vector "a" is collinear to the vector "e".
