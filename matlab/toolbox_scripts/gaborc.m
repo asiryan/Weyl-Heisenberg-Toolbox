@@ -18,7 +18,7 @@ function [ G ] = gaborc( M, L, a, sigma )
 N = M * L; % samples
 
 %% 1. Discretization
-g = gaussian(N, sigma);
+g = tgvec(N, sigma);
 
 %% 2. Complex basis: Gr[N, N] and Gi[N, N]
 [Gr, Gi] = gshell(g, M, a);
