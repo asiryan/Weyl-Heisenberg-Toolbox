@@ -35,6 +35,7 @@ This toolbox provides methods to construct Weyl-Heisenberg basis and its modific
 | [weylhzr.m](matlab/toolbox_scripts/weylhzr.m) | yes | real | 2N x 2N | Weyl-Heisenberg basis (real) |
 | [weylhzf.m](matlab/toolbox_scripts/weylhzf.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (fast algorithm) |
 | [weylhzg.m](matlab/toolbox_scripts/weylhzg.m) | yes | complex | N x 2N | Weyl-Heisenberg basis (Gram-Schmidt) |
+| [weylhzh.m](matlab/toolbox_scripts/weylhzh.m) | yes | real | N x N | Weyl-Heisenberg basis (Hartley) |
 
 # Compression
 This toolbox includes a new approach to image compression based on the discrete Weyl-Heisenberg transform. Comparison of our technique and the original JPEG (DCT-based) algorithm for different values of the quantization coefficient *R* is presented below. Figures 1-2 show, as an example, the results of compressing the same image [barbara.png](matlab/toolbox_samples/Images/barbara.png) (512×512 pixels) at *R* = 1, 4, 8 using [DCT](matlab/toolbox_samples/jpeg_dct.m) (JPEG) and [DWHT](matlab/toolbox_samples/jpeg_dwht.m), and Tables 1-2 show extended numerical results.
