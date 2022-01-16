@@ -61,7 +61,7 @@ This toolbox includes a new approach to image compression based on the discrete 
 | Quality losses, *E* | 326.86 | 494.31 | 737.01 | 1073.84 | 1451.38 | 1796.39 |
 
 # Other implementations
-[UMapx.NET](https://github.com/asiryan/UMapx.NET) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
+[UMapx](https://github.com/asiryan/UMapx) - Digital signal processing library for .NET Core and .NET Framework. Fast and optimized.
 
 # References
 1. *D. Petrov, V. Volchkov* - Orthogonal well-localized Weyl-Heisenberg basis construction and optimization for multicarrier digital communication systems (2009).
